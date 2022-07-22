@@ -43,7 +43,7 @@ const Registrar = () => {
 
     //creando el usuario en la api
     try {
-      const { data } = await clienteAxios.post(`/usuarios`,
+      const { data } = await clienteAxios.post(`${import.meta.env.VITE_BACKEND_URL}/api/usuarios`,
         { nombre, email, password });
       setAlerta({
         msg: data.msg,
